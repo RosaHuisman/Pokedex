@@ -9,6 +9,22 @@ html {
     justify-content: space-around;
 
 }
+h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+h2 {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+h4 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
 
 .pokemon_home {
     text-align: center;
@@ -190,9 +206,27 @@ progress {
     width: 100%;
     height: 20px;
     border-radius: 5px;
+    margin: 5px;
+   
 }
+
+
+
+progress[value]::-webkit-progress-bar
+{
+    background-color: #184447 ;
+    border-radius: 5px;
+      
+}
+
+progress::-webkit-progress-value {  
+    background-color: white ;
+    border-radius: 5px 0 0 5px;
+
+} 
 
 .details_link {
     text-align: center;
 
 }
+
