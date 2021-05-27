@@ -1,0 +1,198 @@
+html {
+    background-color: #449da3;
+    font-family: 'Bree Serif', Arial, Helvetica, sans-serif;
+}
+
+.main_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.pokemon_home {
+    text-align: center;
+    background-color: #26757a;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.pokemon_home_img {
+    width: 280px;
+
+}
+
+.pokemon_home_title {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.link {
+    text-decoration: none;
+    color: #449da3;
+}
+
+.link_white {
+    color: white;
+}
+
+.nav_bar {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    margin: 20px 3%;
+    border-radius: 30px;
+}
+
+.nav_right {
+    display: flex;
+}
+
+.nav_element {
+    padding: 20px 0;
+    margin: 0 10px 0 0;
+}
+
+.nav_element_h1 {
+    margin: 0 20px;
+}
+
+.details_page {
+    color: white;
+}
+
+.details_title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.details_container {
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon_details_img {
+    width: 350px;
+
+}
+
+.left_container {
+    width: 40%;
+    margin: 0 20px
+}
+
+.right_container {
+    background-color: #26757a;
+    width: 60%;
+    border-radius: 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.details_type {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.type {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.type-aaaabb {
+    background-color: #aaaabb;
+}
+
+.type-bb5544 {
+    background-color: #bb5544;
+}
+
+.type-7766ee {
+    background-color: #7766ee;
+}
+
+.type-3399ff {
+    background-color: #3399ff;
+}
+
+.type-ffbb33 {
+    background-color: #ffbb33;
+}
+
+.type-ff4422 {
+    background-color: #ff4422;
+}
+
+.type-77ddff {
+    background-color: #77ddff;
+}
+
+.type-aabb22 {
+    background-color: #aabb22;
+}
+
+.type-bbaabb {
+    background-color: #bbaabb;
+}
+
+.type-77cc55 {
+    background-color: #77cc55;
+}
+
+.type-aa5599 {
+    background-color: #aa5599;
+}
+
+.type-ff5599 {
+    background-color: #ff5599;
+}
+
+.type-bbaa66 {
+    background-color: #bbaa66;
+}
+
+.type-ddbb55 {
+    background-color: #ddbb55;
+}
+
+.type-6666bb {
+    background-color: #6666bb;
+}
+
+.type-665544 {
+    background-color: #665544;
+}
+
+.type-6699ff {
+    background-color: #6699ff;
+}
+
+
+
+table {
+    width: 100%;
+}
+
+.details_stats_name {
+    width: 30%;
+}
+.details_stats_number {
+    width: 10%;
+}
+.details_stats_progress {
+    width: 40%;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.details_link {
+    text-align: center;
+
+}

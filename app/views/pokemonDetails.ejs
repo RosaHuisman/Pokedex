@@ -1,0 +1,122 @@
+<%- include('./partials/header')  %>
+
+
+<div class="details_page">
+    <h1 class="details_title">Details de <%= pokemon[0].nom%></h1>
+
+    <div class="details_container">
+
+        <div class="left_container">
+            <img class="pokemon_details_img" src="/img/<%= pokemon[0].numero %>.png" alt="<%= pokemon.nom %>">
+        </div>
+        <div class="right_container">
+            <h2>#<%= pokemon[0].numero %> <%= pokemon[0].nom %></h2>
+
+            <div class="details_type">
+                <% for (const type of pokemon) { %>
+                <div class="type type-<%=type.color%>"><%= type.name %></div>
+                <% } %>
+            </div>
+
+            <h3>Statistiques</h3>
+
+            <table>
+                <tbody>
+                    <tr class="details_stats">
+                        <td class="details_stats_name">
+                            <span>PV</span>
+                        </td>
+                        <td class="details_stats_number">
+                            <label for="pv"><%= pokemon[0].pv%></label>
+                        </td>
+                        <td class="details_stats_progress">
+                            <progress id="pv" max="255" value="<%= pokemon[0].pv%>"> <%= pokemon[0].pv%> </progress>
+                        </td>
+                    </tr>
+
+                    <tr class="details_stats">
+                        <td class="details_stats_name">
+                            <span>Attaque</span>
+                        </td>
+                        <td class="details_stats_number>
+                            <label for=" attaque"> <%= pokemon[0].attaque%></label> </td>
+                        <td class="details_stats_progress">
+                            <progress id="attaque" max="255" value="<%= pokemon[0].attaque%>"> <%= pokemon[0].attaque%>
+                            </progress>
+                        </td>
+                    </tr>
+
+                    <tr class="details_stats">
+                        <td>
+                            <span>Défense</span>
+                        </td>
+                        <td>
+                            <label for="defense"> <%= pokemon[0].defense%></label>
+                        </td>
+                        <td>
+                            <progress id="defense" max="255" value="<%= pokemon[0].defense%>"> <%= pokemon[0].defense%>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr class="details_stats">
+                        <td>
+
+                            <span>Attaque Spé</span> </td>
+                        <td>
+                            <label for="attaque_spe"> <%= pokemon[0].attaque_spe%></label>
+                        </td>
+                        <td>
+
+                            <progress id="attaque_spe" max="255" value="<%= pokemon[0].attaque_spe%>">
+                                <%= pokemon[0].attaque_spe%>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr class="details_stats">
+                        <td>
+                            <span>Défense Spé</span>
+                        </td>
+                        <td>
+                            <label for="defense_spe"> <%= pokemon[0].defense_spe%></label>
+                        </td>
+                        <td>
+                            <progress id="defense_spe" max="255" value="<%= pokemon[0].defense_spe%>">
+                                <%= pokemon[0].defense_spe%>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr class="details_stats">
+                        <td>
+                            <span>Vitesse </span>
+                        </td>
+                        <td>
+                            <label for="vitesse"><%= pokemon[0].vitesse%></label>
+                        </td>
+                        <td>
+                            <progress id="vitesse" max="255" value="<%= pokemon[0].vitesse%>"> <%= pokemon[0].vitesse%>
+                            </progress>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <p class="details_link">
+     <a class="link link_white" href="/">
+            Revenir à la liste
+        </a>
+       
+    </p>
+
+
+
+</div>
+
+
+
+
+
+<%- include('./partials/footer') %>
