@@ -8,6 +8,8 @@ const mainController = require('./controllers/mainController');
 
 router.get('/', mainController.home);
 router.get('/pokemon/:id', mainController.pokemonDetails);
+router.get('/types', mainController.typePage);
+router.get('/type/:type', mainController.pokemonsOfOneType);
 
 
 

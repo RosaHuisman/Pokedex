@@ -2,12 +2,10 @@
 -- Structure de la table 'pokemon'
 --
 
-BEGIN;
-
-DROP TABLE IF EXISTS "pokemon" cascade;
+DROP TABLE IF EXISTS "pokemon";
 
 CREATE TABLE "pokemon" (
-  "id" int NOT NULL UNIQUE,
+  "id" int NOT NULL,
   "nom" varchar(255) NOT NULL,
   "pv" int NOT NULL,
   "attaque" int NOT NULL,
@@ -15,7 +13,7 @@ CREATE TABLE "pokemon" (
   "attaque_spe" int NOT NULL,
   "defense_spe" int NOT NULL,
   "vitesse" int NOT NULL,
-  "numero" int NOT NULL UNIQUE
+  "numero" int NOT NULL
 );
 
 --
@@ -178,52 +176,15 @@ INSERT INTO "pokemon" ("id", "nom", "pv", "attaque", "defense", "attaque_spe", "
 -- --------------------------------------------------------
 
 --
--- Structure de la table 'type'
---
-
-DROP TABLE IF EXISTS "type" cascade;
-
-CREATE TABLE "type" (
-  "id" int NOT NULL UNIQUE,
-  "name" varchar(255) NOT NULL,
-  "color" varchar(6) NOT NULL 
-);
-
---
--- Contenu de la table "type"
---
-
-INSERT INTO "type" ("id", "name", "color") VALUES
-(1, 'Acier', 'aaaabb'),
-(2, 'Combat', 'bb5544'),
-(3, 'Dragon', '7766ee'),
-(4, 'Eau', '3399ff'),
-(5, 'Électrik', 'ffbb33'),
-(6, 'Feu', 'ff4422'),
-(7, 'Glace', '77ddff'),
-(8, 'Insecte', 'aabb22'),
-(9, 'Normal', 'bbaabb'),
-(10, 'Plante', '77cc55'),
-(11, 'Poison', 'aa5599'),
-(12, 'Psy', 'ff5599'),
-(13, 'Roche', 'bbaa66'),
-(14, 'Sol', 'ddbb55'),
-(15, 'Spectre', '6666bb'),
-(16, 'Ténèbres', '665544'),
-(17, 'Vol', '6699ff');
-
--- ------------------------------------------------
---
 -- Structure de la table 'pokemon_type'
 --
 DROP TABLE IF EXISTS "pokemon_type";
 
 CREATE TABLE "pokemon_type" (
   "id" int NOT NULL,
-  "pokemon_numero" int NOT NULL REFERENCES "pokemon"("numero"),
-  "type_id" int NOT NULL REFERENCES "type"("id"),
-  PRIMARY KEY ("pokemon_numero", "type_id")
-  );
+  "pokemon_numero" int NOT NULL,
+  "type_id" int NOT NULL
+);
 
 --
 -- Contenu de la table 'pokemon_type'
@@ -446,6 +407,39 @@ INSERT INTO "pokemon_type" ("id", "pokemon_numero", "type_id") VALUES
 (644, 150, 12),
 (645, 151, 12);
 
+-- --------------------------------------------------------
 
+--
+-- Structure de la table 'type'
+--
 
-COMMIT;
+DROP TABLE IF EXISTS "type";
+
+CREATE TABLE "type" (
+  "id" int NOT NULL,
+  "name" varchar(255) NOT NULL,
+  "color" varchar(6) NOT NULL
+);
+
+--
+-- Contenu de la table "type"
+--
+
+INSERT INTO "type" ("id", "name", "color") VALUES
+(1, 'Acier', 'aaaabb'),
+(2, 'Combat', 'bb5544'),
+(3, 'Dragon', '7766ee'),
+(4, 'Eau', '3399ff'),
+(5, 'Électrik', 'ffbb33'),
+(6, 'Feu', 'ff4422'),
+(7, 'Glace', '77ddff'),
+(8, 'Insecte', 'aabb22'),
+(9, 'Normal', 'bbaabb'),
+(10, 'Plante', '77cc55'),
+(11, 'Poison', 'aa5599'),
+(12, 'Psy', 'ff5599'),
+(13, 'Roche', 'bbaa66'),
+(14, 'Sol', 'ddbb55'),
+(15, 'Spectre', '6666bb'),
+(16, 'Ténèbres', '665544'),
+(17, 'Vol', '6699ff');
